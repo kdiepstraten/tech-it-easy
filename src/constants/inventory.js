@@ -328,4 +328,23 @@ export let inventory = [
     },
 ];
 
+// Opdracht 1a
+const tvNames = inventory.map((tv)=>{
+    return tv.name;
+})
+console.log(tvNames);
 
+// Opdracht 1b
+const soldOut = inventory.map((tv) =>{
+    let currentStock = tv.originalStock - tv.sold;
+    if (currentStock === 0){
+        console.log(tv);
+    }
+})
+console.log(soldOut);
+
+// Opdracht 1c
+const tvType = inventory.find((tv) =>{
+    return tv.type === 'NH3216SMART';
+});
+console.log(tvType);

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --transition: transform 1s ease-in-out;
+    --transformBegin: scale(1);
+    --transformScale: scale(1.1);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+p {
+    margin: 0 20px;
+    font-size: 32px;
+}
+.box-green h1,
+.box-blue h1,
+.box-red h1 {
+    width: 250px;
+}
+.green {
+    margin: 0 40px;
+    color: hsl(120, 61%, 34%);
+}
+
+.box-green {
+    background-color: hsla(120, 61%, 34%, 0.5);
+    border: 1px solid hsl(120, 31%, 34%);
+}
+.box-green:hover {
+    border: 3px solid hsl(120, 31%, 34%);
+}
+.blue {
+    margin: 0 40px;
+    color: steelblue;
+}
+.box-blue {
+    background-color: hsla(207, 44%, 49%, 0.5);
+    border: 1px solid hsl(207, 14%, 49%);
+}
+.box-blue:hover {
+    border: 3px solid hsl(207, 14%, 49%);
+}
+.red {
+    margin: 0 40px;
+    color: indianred;
+}
+.box-red {
+    background-color: hsla(0, 53%, 58%, 0.5);
+    border: 1px solid hsl(0, 23%, 58%);
+}
+.box-red:hover {
+    border: 3px solid hsl(0, 23%, 58%);
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px 0;
+    transform: var(--transformBegin);
+    transition: var(--transition);
+}
+.product:hover {
+    transform: var(--transformScale);
+    transition: var(--transition);
+}
+.product figure {
+    width: 200px;
+    height: 150px;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.price {
+    text-align: left;
+}
+
+.buttons {
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 0 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+}
+
+button:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 0 3px steelblue;
+    color: steelblue;
+}
+
